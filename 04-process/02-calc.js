@@ -6,7 +6,7 @@
 
 var fn = process.argv[2];
 
-if(fn === '' || fn === '-h' || fn === '--help' ){
+if(typeof(fn) === 'undefined' || fn === '-h' || fn === '--help' ){
   console.log('请输入少于3个的参数！');
 }else{
   console.log(fn,'=',eval(fn));
