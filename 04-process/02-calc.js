@@ -6,4 +6,9 @@
 
 var fn = process.argv[2];
 
-console.log(fn,'=',eval(fn));
+if(fn === '' || fn === '-h' || fn === '--help' ){
+  console.log('请输入少于3个的参数！');
+}else{
+  console.log(fn,'=',eval(fn));
+}
+

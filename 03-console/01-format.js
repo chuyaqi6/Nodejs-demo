@@ -1,6 +1,7 @@
 #!/usr/bin/node
 
-const log = console.log;
+const log = console.log,
+      error = console.error;
 
 var cyq = {
     'Name':'褚雅琦',
@@ -15,3 +16,6 @@ log('Chuyaqi Info:%J',cyq);
 
 log('Name:',cyq.Name);
 log(`Age is ${cyq.Age}`);
+
+error('Error:something is wrong!');
+
