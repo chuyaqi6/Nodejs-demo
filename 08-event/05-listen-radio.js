@@ -12,6 +12,7 @@ var radio = new Radio(station);
 
 radio.on('play',(station)=>{
   log('"%s" FM %s opened!',station.name,station.freq);
+  log('lalala......');
 });
 
 radio.on('stop',(station)=>{

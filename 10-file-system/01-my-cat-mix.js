@@ -6,5 +6,6 @@ const fs = require('fs'),
 const fid = fs.openSync(file,'r');
 
 console.log(fs.readFileSync(fid).toString('utf8'));
+//fs.writeSync()
 
 fs.closeSync(fid);

@@ -19,7 +19,7 @@ function Radio(station){
   },5000);
 
   function emit(evt,arg){
-    if(typeof(_listeners[evt])=='undefined'){
+    if(typeof(_listeners[evt])==='undefined'){
       console.error('Error:%s not defined',evt);
       process.exit(1);
     };
