@@ -10,11 +10,11 @@ buf1[0] = 0x11;//十六进制
 
 //循环初始化
 for(var i = 0;i<buf1.length;i++){
-    buf1[i] = i;
- }
+  buf1[i] = i;
+}
 log('buf1',buf1);
 
- //buf1.fill(0,0,256);
+//buf1.fill(0,0,256);
 //buf1切片操作
 var buf2 = buf1.slice(246,256);
 log('buf2',buf2);

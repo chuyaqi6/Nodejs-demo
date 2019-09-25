@@ -18,7 +18,7 @@ function Dog(name,energy){
     }else{
       clearInterval(timer);
     }
-  },1000)
+  },1000);
 
   this.getName = () => _name;
   this.getEnergy = () => _energy;

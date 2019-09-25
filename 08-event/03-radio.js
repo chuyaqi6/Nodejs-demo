@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const EventEmitter = require('events').EventEmitter;
+const EventEmitter = require('events').EventEmitter,
       util = require('util');
 
 function Radio(station){

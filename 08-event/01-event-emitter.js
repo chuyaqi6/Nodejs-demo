@@ -20,4 +20,4 @@ e.on('hello',function(){
 e.on('bye',function(){
   console.log('goodbye!');
   process.exit();
-})
+});

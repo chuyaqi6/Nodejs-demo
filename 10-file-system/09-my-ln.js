@@ -1,6 +1,9 @@
 #!/usr/bin/node
 
 const fs = require('fs');
+// opt = process.argv[2],
+// src = process.argv[3],
+// lnk = process.argv[4];
 
 switch(process.argv.length){
   case 4://hard link
@@ -11,10 +14,10 @@ switch(process.argv.length){
     break;
   case 5://soft link
     var opt = process.argv[2],
-        src = process.argv[3],
-        lnk = process.argv[4];
+        src1 = process.argv[3],
+        lnk2 = process.argv[4];
     if(opt !== '-s')errMsg();
-    fs.symlinkSync(src,lnk);
+    fs.symlinkSync(src1,lnk2);
     break;
   default://error
     errMsg();

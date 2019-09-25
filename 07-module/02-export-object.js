@@ -1,6 +1,4 @@
-p
 #!/usr/bin/node
-
 var circle = {
   /**
    * 计算圆的面积

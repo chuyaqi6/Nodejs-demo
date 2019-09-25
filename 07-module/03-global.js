@@ -1,5 +1,5 @@
 #!/usr/bin/node
-
+/*global pi*/
 global.pi = Math.PI;
 
 global.circle = (radius) => {

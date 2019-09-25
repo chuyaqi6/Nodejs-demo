@@ -14,5 +14,5 @@ if(fs.existsSync(file)){
 
 //事件捕获异常
 //source.on('error',function(err){
-  //console.error(err.message);
+//  console.error(err.message);
 //})

@@ -5,5 +5,5 @@ const fs = require('fs'),
       gid = process.argv[3],
       dst = process.argv[4];
 
-fs.chownSync(dst,Number(uid),Number(gid);
+fs.chownSync(dst,Number(uid),Number(gid));
 

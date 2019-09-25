@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
 const fs = require('fs'),
-      log = console.log,
       path = require('path'),
       http = require('http'),
       file = process.argv[2];
@@ -12,10 +11,10 @@ if(process.argv.length !== 3){
 }
 
 try {
-    var data = fs.readFileSync(file).toString('base64');
+  var data = fs.readFileSync(file).toString('base64');
 } catch(e) {
-    console.error(e.message);
-    process.exit(2);
+  console.error(e.message);
+  process.exit(2);
 }
 
 var ext  = path.extname(file);

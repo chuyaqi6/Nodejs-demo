@@ -4,9 +4,9 @@ const log = console.log,
       error = console.error;
 
 var cyq = {
-    'Name':'褚雅琦',
-      'QQ':'2484917266',
-        'Age':21
+  'Name':'褚雅琦',
+  'QQ':'2484917266',
+  'Age':21
 
 };
 

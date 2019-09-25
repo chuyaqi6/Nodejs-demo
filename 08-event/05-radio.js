@@ -22,17 +22,17 @@ function Radio(station){
     if(typeof(_listeners[evt])==='undefined'){
       console.error('Error:%s not defined',evt);
       process.exit(1);
-    };
+    }
     _listeners[evt].forEach((fn)=>{
       fn.call(this,arg);
     });
-  };
+  }
   this.on = (evt,fn)=>{
     if(typeof _listeners[evt] == 'undefined'){
       _listeners[evt]=[];
     }
     _listeners[evt].push(fn);
-  }
+  };
 }
 //导出
 module.exports = Radio;
