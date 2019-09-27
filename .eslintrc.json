@@ -36,7 +36,8 @@
         "no-undef": [
             "error", 
             {"typeof": true  }
-        ]
+        ],
+        "no-unused-vars":0
 
     }
 }
