@@ -23,6 +23,6 @@ http.get(global.encodeURI(addr),function(res){
   });
   res.on('end',function(){
     weather = JSON.parse(weather);
-    log(weather.result.today);
-  })
+    log(weather.result.today.temperature);
+  });
 });

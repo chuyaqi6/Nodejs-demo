@@ -1,13 +1,14 @@
 #!/usr/bin/node
 
 const url = require('url'),
-      addr = process.argv[2] || 'http://sample.wangding.in/web/one-div.html';
+      addr = 'http://localhost:8080',
+      http = require('http'),
+      msg = process.argv[2];
 
-var protocol = url.parse(addr).protocol;
-console.log(protocol);
+var option = url.parse(addr);
+option.method = 'POST';
 
-const http = (protocol === 'http:') ? require('http') : require('https');
-http.get(addr,function(res){
+var req = http.request(option,function(res){
   //打印开始
   console.log(`HTTP/${res.httpVersion} ${res.statusCode} ${res.statusMessage}`);
   //打印响应头
@@ -16,3 +17,4 @@ http.get(addr,function(res){
   //打印响应体
   res.pipe(process.stdout);
 });
+req.end(msg);
