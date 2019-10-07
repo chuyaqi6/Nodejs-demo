@@ -19,8 +19,7 @@ if(par === 'list'){
     else{
       fs.mkdirSync('folder');
     }
-  });
-  log('加油！');
+  })
 }else{
   console.log('命令行参数错误！');
 }
