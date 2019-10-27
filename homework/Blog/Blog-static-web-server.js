@@ -1,7 +1,9 @@
 #!/usr/bin/node
 
 const http = require('http'),
+      url = require('url'),
       path = require('path'),
+      qs = require('querystring'),
       fs = require('fs'),
       log = console.log;
 
@@ -9,19 +11,16 @@ http.createServer((req,res)=>{
   log(`${req.method} ${req.url} HTTP/${req.httpVersion}`);
   log(req.headers);
   log('');
-  
-  res.write('<h1>你好</h1>');
-  res.end();
-  /*
-  var file = __dirname + req.url;
 
-  fs.readFile(file, (err, data) => {
-    if(err) {
-      log(err.message);
-      res.statusCode = 404;
-      res.end(err.message);                         
-    }else {
-      res.end(data);                  
-    }   
-  });*/
-}).listen(8083);
+  req.pipe(process.stdout);
+  if(req.method === 'GET' && req.url === '/list/'){
+    res.writeHead(200,{'Content-Type':'text/html'});
+    //res.end(fs.readFileSync('./chapterList.html').toString('utf8'));
+    var data = fs.readFileSync('./chapterList.html').toString('utf8');
+    res.end(data);
+  }else{
+    res.statusCode = 404;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Resource not found!');
+  }
+}).listen(8080);
