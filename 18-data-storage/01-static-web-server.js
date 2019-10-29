@@ -11,7 +11,7 @@ http.createServer((req,res)=>{
   if(!fs.existsSync(fileName)) return;
   if(!buf[fileName]){
     console.log('read file');
-    buf[fileName] = fs.readFileSync(fileName)
+    buf[fileName] = fs.readFileSync(fileName);
   }
   res.end(buf[fileName]);
 }).listen(8080);

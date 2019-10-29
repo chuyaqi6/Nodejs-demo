@@ -68,13 +68,13 @@ function select(req,res){
 }
 //写入数据
 function loadData(){
-    try{
-        var data = fs.readFileSync('./todo-list.txt','utf8');
-        return JSON.parse(data);
-    }catch(e){return [];}
+  try{
+    var data = fs.readFileSync('./todo-list.txt','utf8');
+    return JSON.parse(data);
+  }catch(e){return [];}
 }
 //渲染数据
 process.on('SIGINT',()=>{
-    fs.writeFileSync('./todo-list.txt',JSON.stringify(items));
-    process.exit();
-})
+  fs.writeFileSync('./todo-list.txt',JSON.stringify(items));
+  process.exit();
+});
